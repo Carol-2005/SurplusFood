@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <div class="logo" style="color: white;">Feed for<b style="color: #B1FF4E;"> Good.</b></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar" >
+            <ul style="background-color: #062344;">
+                <li><a style="color: white;" href="home.html" >Home</a></li>
+                <li><a  style="color: white;" href="#about" class="active" >About</a></li>
+                <li><a  style="color: white;" href="contact.html" >Contact</a></li>
+                <li><a  style="color: white;" href="profile.php" >Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        hamburger=document.querySelector(".hamburger");
+        hamburger.onclick =function(){
+            navBar=document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+    </script>
+    <style>
+       
+        
+        .coverc{
+          width: 100%;
+          height: 400px;
+          background:url('img/about3.jpg')no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items:center;
+    padding-top: 8rem;
+     
+        } 
+        .title{
+          font-size: 38px;
+          text-align: center;
+          align-items: center; 
+        }
+       
+        .para p{
+            font-size: 23px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+          @media (max-width: 767px) {
+            .para p{
+               font-size: 16px;
+               /* margin-left: 10px; */
+              }
+            #pptslide{
+                height: 200px;
+                width: 300px;
+
+            }
+            #map{
+              height: 200px;
+                width: 300px;
+
+
+            }
+            #overview{
+              height: 200px;
+                width: 300px;
+            }
+            
+        .title{
+          font-size: 28px;
+          margin: 10px;
+          text-align: center;
+          align-items: center; 
+        }
+      }
+     
+    </style>
+    
+    <!-- <section class="coverc">
+        
+    
+    </section> -->
+    <!-- <p class="title">"Welcome to <u> Feed for Good</u> "</p> -->
+    
+    
+        <div class="container" style="background-image: url(About.jpg); width: 100%; height: 400px; background-size: cover; margin-top: 2px;  opacity: 0.9;">
+          <div class="box" style=" height: 400px; background-color: #062344; opacity: 0.8;">
+            <p class="heading" style="font-size: 40px; font-weight: 600; color: white; opacity: 1;">About us</p>
+            <!-- <p  style=" font-size:30px ; text-align: center;" > ABOUT <span>US</span> </p> -->
+          
+            <!-- <br> -->
+          <div class="para">
+            <!-- <p>"Welcome to Food Donate, India's largest and most trusted donating platform that connects donors to verified nonprofits. FoodDonate helps you become a ray of hope for people in need. Choose a cause that is close to your heart and join hands with millions of donors like you who aim to make this world a better place."</p> -->
+          
+            <p style="color: white; opacity: 1;">We are a team of passionate individuals committed to addressing the issue of food waste in India. Our goal is to create a system that connects food donors with charities and NGOs, while also reducing the environmental impact of food waste.</p>
+          </div>
+          </div>
+          
+        <br>
+
+        </div>
+    
+<div class="location" style="background-color: #062344; color: #B1FF4E;">
+  <div class="map"  style="  text-align: center; padding-bottom: 50px; margin-top: 2px;" >
+    <br>
+<p  style=" font-size:40px ; font-weight: 500;" > Location  </p>
+<br>
+<div class="location-box" style="border: 5px solid #FFFBC3;border-radius: 10px;  width: 655px; height: 589px; margin-left: 255px;">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.2518547826976!2d78.14534951744383!3d9.912970000000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5077610d357%3A0x69066b558478379a!2sThiagarajar%20College!5e0!3m2!1sen!2sin!4v1677633156837!5m2!1sen!2sin"  style="width: 550px; height: 470px; margin-top: 66px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+</div>
+
+     </div>
+    </div>
+
+      <!-- <p class="heading"> Our Story</p>
+     <div class="para">
+       <p>Our journey began with a realization that food waste is a significant problem in India. According to a report by the United Nations, India is the world's second-largest food producer, yet it also has one of the highest rates of food waste. This waste has a significant impact on the environment, as well as on food security in the country.</p>
+     </div> -->
+     <!-- <div class="overview"  style="  text-align: center; padding-bottom: 50px;" >
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=1400 height=800 src="https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/3094230/share/2023-3-2/1677763924/main.svg" id="overview"></iframe>
+     </div> --> 
+     <footer class="footer">
+      <div class="footer-left col-md-4 col-sm-6">
+        <p class="about">
+          <span style="font-size: 25px;"> About us</span>The basic concept of this project  Food Waste Management is to collect the excess/leftover  food from donors such as hotels, restaurants, marriage halls , etc and distribute to  the  needy people .
+   </p>
+      
+      </div>
+      <div class="footer-center col-md-4 col-sm-6">
+        <div>
+          <p style="font-size: 75px;"><span> Contact</span> </p>
+          
+        </div>
+        <div>
+      
+          <p> (+91) 7400 260 858</p>
+          
+        </div>
+        <div>
+          <!-- <i class="fa fa-envelope" style="font-size: 17px;
+          line-height: 38px; color:white;"></i> -->
+          <p><a href="#" style="color: #B1FF4E;"> Feedforgood@gmail.com</a></p>
+        </div>
+        
+        <div class="sociallist">
+          <ul class="social">
+          <li><a href="https://www.facebook.com/TheAkshayaPatraFoundation/"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+          <li><a href="https://twitter.com/globalgiving"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+          <li><a href="https://www.instagram.com/charitism/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+          <li><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp" style="font-size:50px;color: black;"></i></a></li>
+         </ul>
+        </div>
+      </div>
+      <div class="footer-right col-md-4 col-sm-6">
+        <h2> Feed for <span style="color: #B1FF4E;">Good</span></h2>
+        <!-- <h2>Food donate</h2> -->
+        <p class="menu">
+          <a href="#">  Home </a> |
+          <a href="about.html">  About </a> |
+          <a href="profile.php">  Profile </a> |
+          <a href="contact.html"> Contact </a>
+        </p>
+        <p class="name" style="color: #B1FF4E;"> Feed for Good &copy 2023</p>
+      </div>
+    </footer>
+
+</body>
+</html>
