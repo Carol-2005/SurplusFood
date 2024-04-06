@@ -32,7 +32,7 @@ if(isset($_POST['sign']))
        
     }
     else{
-        echo '<script type="text/javascript">alert("data not saved")</script>';
+        echo '<script type="text/javascript">alert("Error: '.mysqli_error($connection).'")</script>';
         
     }
 }
@@ -52,7 +52,8 @@ if(isset($_POST['sign']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add restaurant</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <!-- <link rel="stylesheet" href="loginstyle.css"> -->
+    <link rel="stylesheet" href="loginstyle.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
@@ -66,25 +67,25 @@ if(isset($_POST['sign']))
     <div class="regform">
        
         <form action=" " method="post">
-            <p class="logo">Feed for <b style="color: #06C167;">Good</b></p>
+            <p class="logo">Feed for <b class="good">Good</b></p>
             
             <p id="heading">Add Restaurant</p>
             
             <div class="input">
-                <label class="textlabel" for="name">Restaurant name</label><br>
-                <input type="text" id="name" name="name" required/>
+                <label class="textlabel" for="name" >Restaurant name</label><br>
+                <input type="text" id="name" name="name "required/ placeholder="Enter Name">
              </div>
              <div class="input">
                 <label class="textlabel" for="address">Restaurant Complete Address</label><br>
-                <input type="text" id="address" name="address" required/>
+                <input type="text" id="address" name="address" required/ placeholder="Enter Complete Address">
              </div>
              <div class="input">
                 <label class="textlabel" for="email">Email</label>
-                <input type="email" id="email" name="email" required/>
+                <input type="email" id="email" name="email" required/ placeholder="Enter EmailId">
             </div>
              <div class="input">
             <label class="textlabel" for="phoneno">Mobile Number</label>
-            <input type="text" id="phoneno" name="phoneno">
+            <input type="text" id="phoneno" name="phoneno" placeholder="Enter PhoneNo">
          
                 <!-- <label class="textlabel" for="password">Password</label>
                 <input type="password" id="password" name="password" > -->
@@ -96,7 +97,7 @@ if(isset($_POST['sign']))
              <label class="textlabel" for="password">Password</label>
              <div class="password">
               
-                <input type="password" name="password" id="password" required/>
+                <input type="password" name="password" id="password" required/ placeholder="Enter password">
                 <!-- <i class="fa fa-eye-slash" aria-hidden="true" id="showpassword"></i> -->
                 <!-- <i class="bi bi-eye-slash" id="showpassword"></i>  -->
                 <!-- <i class="uil uil-lock icon"></i> -->
@@ -116,7 +117,7 @@ if(isset($_POST['sign']))
                  Continue With  Google </button>  -->
                 
             <div class="signin-up">
-                 <p style="font-size: 20px; text-align: center;">Already added? <a href="signin.php"> Sign in</a></p>
+                 <p style="font-size: 20px; text-align: center;">Have an account already? <a href="signin.php"> Login here</a></p>
              </div>
          
 

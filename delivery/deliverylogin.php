@@ -21,7 +21,7 @@ if (isset($_POST['sign'])) {
         $_SESSION['email'] = $email;
         $_SESSION['name'] = $row['name'];
         $_SESSION['Did']=$row['Did'];
-        $_SESSION['city']=$row['city'];
+       
         header("location:delivery.php");
       } else {
         $msg = 1;
@@ -40,7 +40,7 @@ if (isset($_POST['sign'])) {
       }
     }
   } else {
-    echo "<h1><center>Account does not exists </center></h1>";
+    echo "<h1><center>Account does not exist </center></h1>";
   }
 
 
@@ -79,11 +79,12 @@ if (isset($_POST['sign'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Login Form</title>
-    <link rel="stylesheet" href="deliverycss.css">
+    <!-- <link rel="stylesheet" href="deliverycss.css"> -->
+    <link rel="stylesheet" href="deliverycss.css?v=<?php echo time(); ?>">
   </head>
   <body>
     <div class="center">
-      <h1>Delivery Login</h1>
+      <h1>NGO Login</h1>
       <form method="post">
         <div class="txt_field">
           <input type="email" name="email" required/>
@@ -99,7 +100,7 @@ if (isset($_POST['sign'])) {
         <?php
         if($msg==1){
                         // echo ' <i class="bx bx-error-circle error-icon"></i>';
-                        echo '<p class="error">Password not match.</p>';
+                        echo '<p class="error">Password does not match.</p>';
                     }
                     ?>
                     <br>

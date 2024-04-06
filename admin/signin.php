@@ -75,10 +75,11 @@ if (isset($_POST['sign'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="formstyle.css">
+    <!-- <link rel="stylesheet" href="formstyle.css"> -->
+    <link rel="stylesheet" href="formstyle.css?v=<?php echo time(); ?>">
     <script src="signin.js" defer></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-   
+    
     <title>Register</title>
 </head>
 <body>
@@ -94,7 +95,7 @@ if (isset($_POST['sign'])) {
             </div> -->
             <div class="input-group">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" >
+                <input type="text" id="email" name="email" placeholder="Enter EmailId">
                 <div class="error"></div>
             </div>
             <!-- <div class="input-group">
@@ -105,7 +106,7 @@ if (isset($_POST['sign'])) {
             <label class="textlabel" for="password">Password</label>
              <div class="password">
               
-                <input type="password" name="password" id="password" required/>
+                <input type="password" name="password" id="password" required/ placeholder="Enter Password">
                 <!-- <i class="fa fa-eye-slash" aria-hidden="true" id="showpassword"></i> -->
                 <!-- <i class="bi bi-eye-slash" id="showpassword"></i>  -->
                 <!-- <i class="uil uil-lock icon"></i> -->

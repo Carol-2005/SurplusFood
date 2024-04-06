@@ -105,6 +105,9 @@ table {
   body {
     font-family: "Open Sans", sans-serif;
     line-height: 1.25;
+    /* background-image: url("About\ Us.jpg");
+    background-position: cover; */
+    background-color: #06C167;
   }
       
 
@@ -161,4 +164,7 @@ margin:10px auto 10px auto;
 color: #fff;
 letter-spacing: 2px;
 transition: 0.2s;
+}
+.hello center{
+ color: #06C167;
 }

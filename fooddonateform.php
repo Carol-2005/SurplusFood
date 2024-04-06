@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
     if($query_run)
     {
 
-        echo '<script type="text/javascript">alert("data saved")</script>';
+        echo '<script type="text/javascript">alert("data saved successfully")</script>';
         header("location:delivery.html");
     }
     else{
@@ -46,17 +46,18 @@ if(isset($_POST['submit']))
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Donate</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <!-- <link rel="stylesheet" href="loginstyle.css"> -->
+    <link rel="stylesheet" href="loginstyle.css?v=<?php echo time(); ?>">
 </head>
-<body style="    background-color: #06C167;">
+<body class="main">
     <div class="container">
         <div class="regformf" >
     <form action="" method="post">
-        <p class="logo">Food <b style="color: #06C167; ">Donate</b></p>
+        <p class="logo1">Donate <b class="logo2" style="color: #06C167; ">Here!</b></p>
         
        <div class="input">
-        <label for="foodname"  > Food Name:</label>
-        <input type="text" id="foodname" name="foodname" required/>
+        <label for="foodname"  > Food Name</label>
+        <input type="text" id="foodname" name="foodname" required/ placeholder="Enter Name">
         </div>
       
       
@@ -64,7 +65,7 @@ if(isset($_POST['submit']))
         <label for="meal" >Meal type :</label> 
         <br><br>
 
-        <input type="radio" name="meal" id="veg" value="veg" required/>
+        <input type="radio" name="meal" id="veg" value="veg" required/  >
         <label for="veg" style="padding-right: 40px;">Veg</label>
         <input type="radio" name="meal" id="Non-veg" value="Non-veg" >
         <label for="Non-veg">Non-veg</label>
@@ -77,11 +78,11 @@ if(isset($_POST['submit']))
         <div class="image-radio-group">
             <input type="radio" id="raw-food" name="image-choice" value="raw-food">
             <label for="raw-food">
-              <img src="img/raw-food.png" alt="raw-food" >
+              <img id="img1" src="img/raw-food.png" alt="raw-food" >
             </label>
             <input type="radio" id="cooked-food" name="image-choice" value="cooked-food"checked>
             <label for="cooked-food">
-              <img src="img/cooked-food.png" alt="cooked-food" >
+              <img src="img\WhatsApp Image 2024-04-05 at 22.57.45.jpeg" id="img2" alt="cooked-food" >
             </label>
             <input type="radio" id="packed-food" name="image-choice" value="packed-food">
             <label for="packed-food">
@@ -93,7 +94,7 @@ if(isset($_POST['submit']))
         </div>
         <div class="input">
         <label for="quantity">Quantity:(number of person /kg)</label>
-        <input type="text" id="quantity" name="quantity" required/>
+        <input type="text" id="quantity" name="quantity" required/ placeholder="Quantity">
         </div>
        <b><p style="text-align: center;">Contact Details</p></b>
         <div class="input">
@@ -103,11 +104,11 @@ if(isset($_POST['submit']))
           </div> -->
       <div>
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name"value="<?php echo"". $_SESSION['name'] ;?>" required/>
+      <input type="text" id="name" name="name"value="<?php echo"". $_SESSION['name'] ;?>" required/ placeholder="Enter Name of Restaurant">
       </div>
       <div>
         <label for="phoneno" >Mobile Number:</label>
-      <input type="text" id="phoneno" name="phoneno" maxlength="10" pattern="[0-9]{10}" required />
+      <input type="text" id="phoneno" name="phoneno" maxlength="10" pattern="[0-9]{10}" required / placeholder="Enter Phone Number" >
         
       </div>
       </div>
@@ -121,8 +122,7 @@ if(isset($_POST['submit']))
   <option value="Pune">Pune</option>
 </select> 
 <br><br>
-    <label for="address" style="">Address:</label>
-    <input type="text" id="address" name="address" required/><br>
+    <input type="text" id="address" name="address" required/ placeholder="Enter Address"><br>
         
       
        

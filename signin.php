@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 include 'connection.php';
 // $connection = mysqli_connect("localhost:3307", "root", "");
@@ -20,7 +22,7 @@ if (isset($_POST['sign'])) {
       if (password_verify($password, $row['password'])) {
         $_SESSION['email'] = $email;
         $_SESSION['name'] = $row['name'];
-        $_SESSION['gender'] = $row['gender'];
+        $_SESSION['id'] = $row['id'];
         header("location:home.html");
       } else {
         $msg = 1;
@@ -28,7 +30,7 @@ if (isset($_POST['sign'])) {
       }
     }
   } else {
-    echo "<h1><center>Account does not exists </center></h1>";
+    echo "<h1><center>Account does not exist </center></h1>";
   }
 
 }
@@ -41,7 +43,8 @@ if (isset($_POST['sign'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="loginstyle.css">
+    <!-- <link rel="stylesheet" href="loginstyle.css"> -->
+    <link rel="stylesheet" href="loginstyle.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
@@ -62,7 +65,7 @@ if (isset($_POST['sign'])) {
 
             <form action=" " method="post">
 
-                <p class="logo" style="">Feed for<b style="color:#06C167; "> Good</b></p>
+                <p class="logo" style="">Feed for<b class="good"> Good.</b></p>
                 <p id="heading" style="padding-left: 1px;"> Welcome back ! <img src="" alt=""> </p>
 
                 <div class="input">
@@ -78,7 +81,7 @@ if (isset($_POST['sign'])) {
                     <?php
                     if($msg==1){
                         echo ' <i class="bx bx-error-circle error-icon"></i>';
-                        echo '<p class="error">Password not match.</p>';
+                        echo '<p class="error">Password does not match.</p>';
                     }
                     ?>
                 

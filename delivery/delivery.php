@@ -14,6 +14,7 @@ curl_setopt($ch,CURLOPT_URL,"http://ip-api.com/json");
 curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
 $result=curl_exec($ch);
 $result=json_decode($result);
+$city=$_SESSION['location'];
 // $city= $result->city;
 // echo $city;
 
@@ -38,7 +39,8 @@ $result=json_decode($result);
 </head>
 <body>
 <header>
-        <div class="logo">Feed For<b style="color: #06C167;"> Good</b></div>
+    
+        <div class="logo" >Feed For<b style="color: #06C167;"> Good</b></div>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
@@ -46,7 +48,8 @@ $result=json_decode($result);
         </div>
         <nav class="nav-bar">
             <ul>
-                <li><a href="#home" class="active">Home</a></li>
+                
+                <li ><a href="#home" class="active">Home</a></li>
                 <li><a href="openmap.php" >Map</a></li>
                 <li><a href="deliverymyord.php" >My Orders</a></li>
                 <!-- <li ><a href="../logout.php"  >Logout</a></li> -->
@@ -61,31 +64,34 @@ $result=json_decode($result);
             navBar.classList.toggle("active");
         }
     </script>
-<?php
 
-// echo var_export(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=103.113.190.19')));
+
+<!-- // echo var_export(unserialize(file_get_contents('http://www.geoplugin.net/php.gp?ip=103.113.190.19')));
 // echo "Your city: {$city}\n";
 
 // $city = "<script language=javascript> document.write(geoplugin_city());</script>"; 
-// $scity=$city;
-?>
+// $scity=$city; -->
+
     <style>
         .itm{
             background-color: white;
             display: grid;
         }
         .itm img{
-            width: 400px;
-            height: 400px;
+            
+             width: 400px;
+            height: 400px; 
             margin-left: auto;
             margin-right: auto;
-        }
+        }  
+        
         p{
             text-align: center; font-size: 30PX;color: black; margin-top: 50px;
         }
         a{
             /* text-decoration: underline; */
         }
+        
         @media (max-width: 767px) {
             .itm{
                 /* float: left; */
@@ -97,12 +103,15 @@ $result=json_decode($result);
             }
         }
     </style>
-         <h2><center>Welcome <?php echo"$name";?></center></h2>
-
+    <div class="hello">
+    <h2 ><center>Welcome<?php echo"$name";?></center></h2>
+    </div>
+        
+         
         <div class="itm" >
-
-            <img src="../img/delivery.gif" alt="" width="400" height="400"> 
-          
+            <img src="C:\xampp\htdocs\food-waste-management-system-main\img\delivery (1).gif" alt="" > 
+       
+         
         </div>
         <!-- <h2><center>your Location : <?php echo"$city" ?></center></h2> -->
         <div class="get">
@@ -123,7 +132,7 @@ $result=mysqli_query($connection, $sql);
 
 // Check for errors
 if (!$result) {
-    die("Error executing query: " . mysqli_error($conn));
+    die("Error executing query: " . mysqli_error($connection));
 }
 
 // Fetch the data as an associative array
@@ -153,7 +162,7 @@ if (isset($_POST['food']) && isset($_POST['delivery_person_id'])) {
     if (!$result) {
         die("Error assigning order: " . mysqli_error($conn));
     }
-
+ 
     // Reload the page to prevent duplicate assignments
     header('Location: ' . $_SERVER['REQUEST_URI']);
     // exit;
@@ -163,7 +172,7 @@ if (isset($_POST['food']) && isset($_POST['delivery_person_id'])) {
 
 
 ?>
-<div class="log">
+<div class="log" >
 <!-- <button type="submit" name="food" onclick="">My orders</button> -->
 <a href="deliverymyord.php">My orders</a>
 
@@ -200,6 +209,7 @@ if (isset($_POST['food']) && isset($_POST['delivery_person_id'])) {
             <td><?= $row['name'] ?></td>
             <td><?= $row['address'] ?></td> -->
             <td data-label="Action" style="margin:auto">
+            
                 <?php if ($row['delivery_by'] == null) { ?>
                     <form method="post" action=" ">
                         <input type="hidden" name="order_id" value="<?= $row['Fid'] ?>">

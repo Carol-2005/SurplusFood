@@ -18,14 +18,14 @@ if (isset($_POST['sign'])) {
       if (password_verify($sanitized_password, $row['password'])) {
         $_SESSION['email'] = $email;
         $_SESSION['name'] = $row['name'];
-        $_SESSION['gender'] = $row['gender'];
+       
         header("location:home.html");
       } else {
         // echo "<h1><center> Login Failed incorrect password</center></h1>";
       }
     }
   } else {
-    echo "<h1><center>Account does not exists </center></h1>";
+    echo "<h1><center>Account does not exist </center></h1>";
   }
 
 

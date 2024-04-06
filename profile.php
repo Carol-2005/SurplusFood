@@ -1,5 +1,6 @@
 
 <?php
+
 include("login.php"); 
 // if($_SESSION['loggedin']==true){
 //     header("location:loginindex.html");
@@ -18,8 +19,10 @@ if($_SESSION['name']==''){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <title>Document</title> -->
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="profile.css">
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <!-- <link rel="stylesheet" href="profile.css"> -->
+    <link rel="stylesheet" href="home.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="profile.css.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -79,7 +82,7 @@ if($_SESSION['name']==''){
               <div class="info" style="padding-left:10px;">
               <p style="">Name  :<?php echo"". $_SESSION['name'] ;?> </p><br>
               <p style="">Email :<?php echo"". $_SESSION['email'];?> </p><br>
-              <p style="">Gender:<?php echo"". $_SESSION['gender'] ;?> </p><br>
+              <!-- <p style="">Gender:<?php echo"". $_SESSION['gender'] ;?> </p><br> -->
                <!-- <p style="font-family: 'Times New Roman', Times, serif;">gender  :<?php echo"". $_SESSION['gender'] ;?> </p><br>  -->
               
               <a href="logout.php" style="float: left;margin-top: 6px ;border-radius:5px; background-color: #06C167; color: white;padding: ;padding-left: 10px;padding-right: 10px;">Logout</a>

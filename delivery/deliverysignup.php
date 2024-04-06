@@ -33,7 +33,7 @@ if(isset($_POST['sign']))
         // $_SESSION['name']=$row['name'];
         // $_SESSION['gender']=$row['gender'];
        
-        header("location:delivery.php");
+        header("location:deliverylogin.php");
         // echo "<h1><center>Account does not exists </center></h1>";
         //  echo '<script type="text/javascript">alert("Account created successfully")</script>'; -->
     }
@@ -62,24 +62,25 @@ if(isset($_POST['sign']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Animated Login Form | CodingNepal</title>
-    <link rel="stylesheet" href="deliverycss.css">
+    <!-- <link rel="stylesheet" href="deliverycss.css"> -->
+    <link rel="stylesheet" href="deliverycss.css?v=<?php echo time(); ?>">
   </head>
   <body>
     <div class="center">
       <h1>Register</h1>
       <form method="post" action=" ">
         <div class="txt_field">
-          <input type="text" name="username" required/>
+          <input type="text" name="username" required/ placeholder="Enter Username">
           <span></span>
           <label>Username</label>
         </div>
         <div class="txt_field">
-          <input type="password" name="password" required/>
+          <input type="password" name="password" required/ placeholder="Enter password">
           <span></span>
           <label>Password</label>
         </div>
         <div class="txt_field">
-            <input type="email" name="email" required/>
+            <input type="email" name="email" required/ placeholder="Enter Email">
             <span></span>
             <label>Email</label>
           </div>
@@ -103,7 +104,7 @@ if(isset($_POST['sign']))
                           <option value="karur">Karur</option>
                           <option value="ariyalur">Ariyalur</option>
                           <option value="perambalur">Perambalur</option> -->
-                          <option value="Pune" selected>Pune</option>
+                          <option value="Pune">Pune</option>
                           <!-- <option value="virudhunagar">Virudhunagar</option>
                           <option value="dindigul">Dindigul</option>
                           <option value="ramanathapuram">Ramanathapuram</option>
@@ -118,7 +119,7 @@ if(isset($_POST['sign']))
           </div>
           <br>
         <!-- <div class="pass">Forgot Password?</div> -->
-        <input type="submit" name="sign" value="Register">
+       <button type="submit" name="sign">Continue</button>
         <div class="signup_link">
           Alredy a member? <a href="deliverylogin.php">Sigin</a>
         </div>

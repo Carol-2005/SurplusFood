@@ -59,27 +59,28 @@ if(isset($_POST['sign']))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="formstyle.css">
+    <!-- <link rel="stylesheet" href="formstyle.css"> -->
+    <link rel="stylesheet" href="formstyle.css?v=<?php echo time(); ?>">
     <script src="signin.js" defer></script>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
+     
     <title>Register</title>
 </head>
 <body>
     <div class="container">
-        <form action=" " method="post" id="form">
+        <form class="form" action=" " method="post" id="form">
         <!-- <p class="logo" style="">Food <b style="color:#06C167; ">Donate</b></p> -->
             <span class="title">Register</span>
             <br>
             <br>
             <div class="input-group">
                 <label for="username">Name</label>
-                <input type="text" id="username" name="username" required/>
+                <input type="text" id="username" name="username" required/ placeholder="Enter FullName">
                 <div class="error"></div>
             </div>
             <div class="input-group">
                     <label for="email">Email</label>
-                <input type="email" id="email" name="email" required/>
+                <input type="email" id="email" name="email" required/ placeholder="Enter Email">
                         
                     </div>
             <!-- <div class="input-group">
@@ -91,7 +92,7 @@ if(isset($_POST['sign']))
             <label class="textlabel" for="password">Password</label> 
              <div class="password">
               
-                <input type="password" name="password" id="password"  required/>
+                <input type="password" name="password" id="password"  required/ placeholder="Enter Password">
                 <!-- <i class="fa fa-eye-slash" aria-hidden="true" id="showpassword"></i> -->
                 <!-- <i class="bi bi-eye-slash" id="showpassword"></i>  -->
                 <!-- <i class="uil uil-lock icon"></i> -->
@@ -110,7 +111,7 @@ if(isset($_POST['sign']))
             </div> -->
             <div class="input-group">
                     <label for="address">Address</label>
-                    <textarea id="address" name="address" id="address" required/></textarea>
+                    <textarea id="address" name="address" id="address" required/ placeholder="Enter Address"></textarea>
      
                 <!-- <input type="text" id="address" name="address" required/> -->
                         
